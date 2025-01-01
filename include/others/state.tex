@@ -1,0 +1,85 @@
+% State
+    % True
+        \def\dState{\mathbf{x}}
+
+        \def\dIthState{\dState_{i}}
+        \def\dJthState{\dState_{j}}
+        \def\dKthState{\dState_{k}}
+
+        
+        % Transpose
+            \def\dStateTrans{\dState^{\top}}
+        %
+    %
+    % Nominal
+        \def\dStateNom{\bar{\dState}}
+
+        \def\dIthStateNom{\dStateNom_{i}}
+    %
+    % Estimate
+        \def\dStateEst{\hat{\dState}}
+
+        \def\dIthStateEst{\dStateEst_{i}}
+    %
+    % Error
+        \def\dStateErr{\tilde{\dState}}
+
+        \def\dIthStateErr{\dStateErr_{i}}
+        \def\dKthStateErr{\dStateErr_{k}}
+    %
+%
+
+% Velocity
+    % True
+        \def\dVel{\mathbf{v}}
+
+        \def\dVelFromFrameWorldToIMU{\dVel_{\dWorldFrame \dIMUFrame}}
+        % Transpose
+            \def\dVelTrans{\dVel^{\top}}
+
+            \def\dVelTransFromFrameWorldToIMU{\dVelTrans_{\dWorldFrame \dIMUFrame}}
+        %
+    %
+    % Error
+        \def\dVelErr{\tilde{\dVel}}
+
+        \def\dVelErrFromFrameWorldToIMU{\dVelErr_{\dWorldFrame \dIMUFrame}}
+    %
+%
+
+% Biases
+    % gyroscope
+        % True
+            \def\dGyroBias{\mathbf{b}_{\omega}}
+        %
+        % Error
+            \def\dGyroBiasErr{\tilde{\mathbf{b}}_{\omega}}
+        %
+    %
+    % accelerometer
+        % True
+            \def\dAccBias{\mathbf{b}_{a}}
+        %
+        % Error
+            \def\dAccBiasErr{\tilde{\mathbf{b}}_{a}}
+        %
+    %
+%
+
+% Biases noise
+    % gyroscope
+        % True
+            \def\dGyroBiasNoise{\mathbf{n}_{\dGyroBias}}
+        %
+        % Transpose
+            \def\dGyroBiasNoiseTrans{\dGyroBiasNoise^{\top}}
+        %
+    %
+    % accelerometer
+        % True
+            \def\dAccBiasNoise{\mathbf{n}_{\dAccBias}}
+        %
+        % Transpose
+            \def\dAccBiasNoiseTrans{\dAccBiasNoise^{\top}}
+        %
+    %

@@ -1,0 +1,33 @@
+
+- define 서열 (Down to Up)
+  - From A to B
+    - Idx: FromIdxiToj
+    - Frame: FromFrameImuToLidar
+  - Of A or Ath
+    - Idx: Ith
+    - Frame: OfFrameIthImu
+  - 기호
+    - 이름
+      - 기호의 이름이 아닌 의미를 나타내는 이름을 사용함.   
+        - TPert : O / Xi: X
+      - 기호에 특수효과가 들어가면 이름 앞에 명시함, 기호 앞에 명시함.
+        - ErrTPert : O / TildeTPert : X / TPertTilde : X
+      - 윗첨자가 아래첨자보다 먼저 명시됨.
+        - TPertSkewFromIdxiToj : O / TPertFromIdxiTojSkew : X
+Symbols
+  - Pose
+    - 종류
+      - Pose, Xi
+      - Rotation, theta
+      - Translation, \tilde{t}
+    - define 순서 : idx(없으면 무시) -> hat or tilde or bar -> 윗첨자 -> 아래첨자
+      - \def\dTBarInvFromIdxIToJ
+    - From A to B
+      - FromIdxIToJ
+      - FromFrameIMUToLidar, FromFrameKthIMUToJthLidar
+  - Point
+    - 종류
+      - Point, Point-noise(n)
+    - define 순서 : idx -> frame -> hat or tilde or bar -> 윗첨자
+      - \def\dJthPtInKthFrameEstHomo 
+  - Others

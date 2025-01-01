@@ -1,0 +1,90 @@
+% Point
+    % Normal
+        \def\dPt{\mathbf{p}}
+
+        \def\dIthPt{\dPt_{i}}
+        \def\dJthPt{\dPt_{j}}
+        \def\dKthPt{\dPt_{k}}
+
+        \def\dJthPtInJthLidarFrame{{}^{\dJthLidarFrame} \dPt_{j}}
+        \def\dJthPtInKthIMUFrame{{}^{\dKthIMUFrame} \dPt_{j}}
+
+        % Homogeneous
+            \def\dPtHomo{\dPt^{\mathrm{h}}}
+
+            \def\dJthPtHomoInJthLidarFrame{{}^{\dJthLidarFrame} \dPtHomo_{j}}
+            \def\dJthPtHomoInKthIMUFrame{{}^{\dKthIMUFrame} \dPtHomo_{j}}
+            \def\dJthPtHomoInJthIMUFrame{{}^{\dJthIMUFrame} \dPtHomo_{j}}
+        %
+
+        % Transpose
+            \def\dPtTrans{\dPt^{\top}}
+
+            
+    %
+
+    % Nominal
+        \def\dPtNom{\hat{\dPt}}
+
+        \def\dJthPtNomInKthIMUFrame{{}^{\dKthIMUFrame} \dPtNom_{j}}
+        % Homogeneous
+            \def\dPtNomHomo{\dPtNom^{\mathrm{h}}}
+
+            \def\dJthPtNomHomoInJthLidarFrame{{}^{\dJthLidarFrame} \dPtNomHomo_{j}}
+            \def\dJthPtNomHomoInKthIMUFrame{{}^{\dKthIMUFrame} \dPtNomHomo_{j}}
+            \def\dJthPtNomHomoInJthIMUFrame{{}^{\dJthIMUFrame} \dPtNomHomo_{j}}
+        %
+
+    % Hat
+        \def\dPtHat{\hat{\dPt}}
+
+    %
+%
+
+% Point Noise
+    % Normal
+        \def\dPtNoise{\mathbf{n}_{\dPt}}
+
+        \def\dIthPtNoise{\mathbf{n}_{\dIthPt}}
+        \def\dJthPtNoise{\mathbf{n}_{\dJthPt}}
+        \def\dKthPtNoise{\mathbf{n}_{\dKthPt}}
+
+        % Dialated
+            \def\dPtNoiseDil{\mathbf{n}_{\dPt}^{\mathrm{d}}}
+
+            \def\dJthPtNoiseDilInJthLidarFrame{{}^{\dJthLidarFrame} \mathbf{n}_{\dJthPt}^{\mathrm{d}}}
+            \def\dJthPtNoiseDilInKthIMUFrame{{}^{\dKthIMUFrame} \mathbf{n}_{\dJthPt}^{\mathrm{d}}}
+            \def\dJthPtNoiseDilInJthIMUFrame{{}^{\dJthIMUFrame} \mathbf{n}_{\dJthPt}^{\mathrm{d}}}
+        %
+    %
+%
+
+
+% Bearing
+    % Normal
+        \def\dBearing{\boldsymbol{\phi}}
+    %
+    % Hat
+        \def\dBearingEst{\hat{\dBearing}}
+    %
+%
+
+% Bearing Perturbation
+    % Normal
+        \def\dBearingPert{\mathbf{n}_{\phi}}
+%
+
+% Range
+    % Normal
+        \def\dRange{\mathrm{d}}
+    %
+    % Hat
+        \def\dRangeEst{\hat{\dRange}}
+    %
+%
+
+% Range Perturbation
+    % Normal
+        \def\dRangePert{\mathrm{n}_{d}}
+    %
+%
