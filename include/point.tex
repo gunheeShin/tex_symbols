@@ -34,10 +34,6 @@
             \def\dJthPtNomHomoInKthIMUFrame{{}^{\dKthIMUFrame} \dPtNomHomo_{j}}
             \def\dJthPtNomHomoInJthIMUFrame{{}^{\dJthIMUFrame} \dPtNomHomo_{j}}
         %
-
-    % Hat
-        \def\dPtHat{\hat{\dPt}}
-
     %
 %
 
@@ -48,6 +44,8 @@
         \def\dIthPtNoise{\mathbf{n}_{\dIthPt}}
         \def\dJthPtNoise{\mathbf{n}_{\dJthPt}}
         \def\dKthPtNoise{\mathbf{n}_{\dKthPt}}
+
+        \def\dJthPtNoiseInKthIMUFrame{{}^{\dKthIMUFrame} \mathbf{n}_{\dJthPt}}
 
         % Dialated
             \def\dPtNoiseDil{\mathbf{n}_{\dPt}^{\mathrm{d}}}
@@ -64,27 +62,34 @@
     % Normal
         \def\dBearing{\boldsymbol{\phi}}
     %
-    % Hat
-        \def\dBearingEst{\hat{\dBearing}}
+    % Nominal
+        \def\dBearingNom{\hat{\dBearing}}
+    %
+    % Perturbation
+        \def\dBearingPert{\tilde{\dBearing}}
     %
 %
 
-% Bearing Perturbation
+% Bearing Covariance
     % Normal
-        \def\dBearingPert{\mathbf{n}_{\phi}}
+        \def\dBearingCov{\mathbf{\Sigma}_{\dBearing}}
+    %
 %
 
 % Range
     % Normal
         \def\dRange{\mathrm{d}}
     %
-    % Hat
-        \def\dRangeEst{\hat{\dRange}}
+    % Nominal
+        \def\dRangeNom{\hat{\dRange}}
+    %
+    % Perturbation
+        \def\dRangePert{\tilde{\dRange}}
     %
 %
 
-% Range Perturbation
+% Range Covariance
     % Normal
-        \def\dRangePert{\mathrm{n}_{d}}
+        \def\dRangeCov{\Sigma_{\dRange}}
     %
 %
