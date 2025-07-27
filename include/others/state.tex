@@ -34,6 +34,8 @@
     % True
         \def\dVel{\mathbf{v}}
 
+        \def\dIthVel{\dVel_{i}}
+
         \def\dVelFromFrameWorldToIMU{\dVel_{\dWorldFrame \dIMUFrame}}
         % Transpose
             \def\dVelTrans{\dVel^{\top}}
@@ -46,23 +48,38 @@
 
         \def\dVelErrFromFrameWorldToIMU{\dVelErr_{\dWorldFrame \dIMUFrame}}
     %
+
+    % Velocity in world frame
+        \def\dVelWorld{ {}^{\dWorldFrame} \dVel}
+
+        \def\dIthVelWorld{\dVelWorld_{i}}
+
+    % Velocity in Body frame
+        \def\dVelBody{ {}^{\dBodyFrame} \dVel}
+        \def\dIthVelBody{\dVelBody_{i}}
+
+    %
 %
 
 % Biases
     % gyroscope
         % True
-            \def\dGyroBias{\mathbf{b}_{\omega}}
+            \def\dGyroBias{\mathbf{b}^{\dGyro}}
         %
+
+        \def\dIthGyroBias{\dGyroBias_{i}}
         % Error
-            \def\dGyroBiasErr{\tilde{\mathbf{b}}_{\omega}}
+            \def\dGyroBiasErr{\tilde{\dGyroBias}}
         %
     %
     % accelerometer
         % True
-            \def\dAccBias{\mathbf{b}_{a}}
+            \def\dAccBias{\mathbf{b}^{\dAcc}}
         %
+
+        \def\dIthAccBias{\dAccBias_{i}}
         % Error
-            \def\dAccBiasErr{\tilde{\mathbf{b}}_{a}}
+            \def\dAccBiasErr{\tilde{\dAccBias}}
         %
     %
 %

@@ -9,13 +9,18 @@
 
         \def\dIthGyroTrans{\dGyroTrans_{i}}
     %
+    % Estimate
+        \def\dGyroEst{\hat{\dGyro}}
+
+        \def\dIthGyroEst{\dGyroEst_{i}}
+    %
 %
 
 % gyroscope noise
     % True
         \def\dGyroNoise{\mathbf{n}_{\dGyro}}
     %
-    % Transpose
+    % % Transpose
         \def\dGyroNoiseTrans{\dGyroNoise^{\top}}
     %
 %
@@ -31,6 +36,10 @@
 
         \def\dIthAccTrans{\dAccTrans_{i}}
     %
+    % Estimate
+        \def\dAccEst{\hat{\dAcc}}
+
+        \def\dIthAccEst{\dAccEst_{i}}
 %
 
 % accelerometer noise

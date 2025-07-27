@@ -2,6 +2,8 @@
     % True
         \def\dPose{\mathbf{T}}
 
+        \def\dIthPose{\dPose_{i}}
+
         \def\dPoseFromIdxIToJ{\dPose_{ij}}
         \def\dPoseFromIdxIToK{\dPose_{ik}}
         \def\dPoseFromIdxKToJ{\dPose_{kj}}
@@ -130,6 +132,8 @@
     % True
         \def\dRot{\mathbf{R}}
 
+        \def\dIthRot{\dRot_{i}}
+
         \def\dRotFromIdxIToJ{\dRot_{ij}}
         \def\dRotFromIdxIToK{\dRot_{ik}}
         \def\dRotFromIdxKToJ{\dRot_{kj}}
@@ -142,7 +146,13 @@
         % inverse
             \def\dRotNomInv{\dRotNom^{-1}}
         %
-    %    
+    %
+    % Transpose
+        \def\dRotTrans{\dRot^{\top}}
+
+        \def\dIthRotTrans{\dRotTrans_{i}}
+
+        
 %
 
 % Rotation Perturbation
@@ -165,6 +175,8 @@
 % Translation
     % True
         \def\dTls{\mathbf{t}}
+
+        \def\dIthTls{\dTls_{i}}
 
         \def\dTlsFromIdxIToJ{\dTls_{ij}}
         \def\dTlsFromIdxIToK{\dTls_{ik}}
