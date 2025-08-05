@@ -1,62 +1,62 @@
 % State
     % True
-        \def\dState{\mathbf{x}}
+        \newcommand\dState{\mathbf{x}}
 
-        \def\dIthState{\dState_{i}}
-        \def\dJthState{\dState_{j}}
-        \def\dKthState{\dState_{k}}
+        \newcommand\dIthState{\dState_{i}}
+        \newcommand\dJthState{\dState_{j}}
+        \newcommand\dKthState{\dState_{k}}
 
         
         % Transpose
-            \def\dStateTrans{\dState^{\top}}
+            \newcommand\dStateTrans{\dState^{\top}}
         %
     %
     % Nominal
-        \def\dStateNom{\bar{\dState}}
+        \newcommand\dStateNom{\bar{\dState}}
 
-        \def\dIthStateNom{\dStateNom_{i}}
-        \def\dKthStateNom{\dStateNom_{k}}
+        \newcommand\dIthStateNom{\dStateNom_{i}}
+        \newcommand\dKthStateNom{\dStateNom_{k}}
     %
     % Estimate
-        \def\dStateEst{\hat{\dState}}
+        \newcommand\dStateEst{\hat{\dState}}
 
-        \def\dIthStateEst{\dStateEst_{i}}
+        \newcommand\dIthStateEst{\dStateEst_{i}}
     %
     % Error
-        \def\dStateErr{\tilde{\dState}}
+        \newcommand\dStateErr{\tilde{\dState}}
 
-        \def\dIthStateErr{\dStateErr_{i}}
-        \def\dKthStateErr{\dStateErr_{k}}
+        \newcommand\dIthStateErr{\dStateErr_{i}}
+        \newcommand\dKthStateErr{\dStateErr_{k}}
     %
 %
 
 % Velocity
     % True
-        \def\dVel{\mathbf{v}}
+        \newcommand\dVel{\mathbf{v}}
 
-        \def\dIthVel{\dVel_{i}}
+        \newcommand\dIthVel{\dVel_{i}}
 
-        \def\dVelFromFrameWorldToIMU{\dVel_{\dWorldFrame \dIMUFrame}}
+        \newcommand\dVelFromFrameWorldToIMU{\dVel_{\dWorldFrame \dIMUFrame}}
         % Transpose
-            \def\dVelTrans{\dVel^{\top}}
+            \newcommand\dVelTrans{\dVel^{\top}}
 
-            \def\dVelTransFromFrameWorldToIMU{\dVelTrans_{\dWorldFrame \dIMUFrame}}
+            \newcommand\dVelTransFromFrameWorldToIMU{\dVelTrans_{\dWorldFrame \dIMUFrame}}
         %
     %
     % Error
-        \def\dVelErr{\tilde{\dVel}}
+        \newcommand\dVelErr{\tilde{\dVel}}
 
-        \def\dVelErrFromFrameWorldToIMU{\dVelErr_{\dWorldFrame \dIMUFrame}}
+        \newcommand\dVelErrFromFrameWorldToIMU{\dVelErr_{\dWorldFrame \dIMUFrame}}
     %
 
     % Velocity in world frame
-        \def\dVelWorld{ {}^{\dWorldFrame} \dVel}
+        \newcommand\dVelWorld{ {}^{\dWorldFrame} \dVel}
 
-        \def\dIthVelWorld{\dVelWorld_{i}}
+        \newcommand\dIthVelWorld{\dVelWorld_{i}}
 
     % Velocity in Body frame
-        \def\dVelBody{ {}^{\dBodyFrame} \dVel}
-        \def\dIthVelBody{\dVelBody_{i}}
+        \newcommand\dVelBody{ {}^{\dBodyFrame} \dVel}
+        \newcommand\dIthVelBody{\dVelBody_{i}}
 
     %
 %
@@ -64,22 +64,22 @@
 % Biases
     % gyroscope
         % True
-            \def\dGyroBias{\mathbf{b}^{\dGyro}}
+            \newcommand\dGyroBias{\mathbf{b}^{\dGyro}}
         %
 
-        \def\dIthGyroBias{\dGyroBias_{i}}
+        \newcommand\dIthGyroBias{\dGyroBias_{i}}
         % Error
-            \def\dGyroBiasErr{\tilde{\dGyroBias}}
+            \newcommand\dGyroBiasErr{\tilde{\dGyroBias}}
         %
     %
     % accelerometer
         % True
-            \def\dAccBias{\mathbf{b}^{\dAcc}}
+            \newcommand\dAccBias{\mathbf{b}^{\dAcc}}
         %
 
-        \def\dIthAccBias{\dAccBias_{i}}
+        \newcommand\dIthAccBias{\dAccBias_{i}}
         % Error
-            \def\dAccBiasErr{\tilde{\dAccBias}}
+            \newcommand\dAccBiasErr{\tilde{\dAccBias}}
         %
     %
 %
@@ -87,17 +87,17 @@
 % Biases noise
     % gyroscope
         % True
-            \def\dGyroBiasNoise{\mathbf{n}_{\dGyroBias}}
+            \newcommand\dGyroBiasNoise{\mathbf{n}_{\dGyroBias}}
         %
         % Transpose
-            \def\dGyroBiasNoiseTrans{\dGyroBiasNoise^{\top}}
+            \newcommand\dGyroBiasNoiseTrans{\dGyroBiasNoise^{\top}}
         %
     %
     % accelerometer
         % True
-            \def\dAccBiasNoise{\mathbf{n}_{\dAccBias}}
+            \newcommand\dAccBiasNoise{\mathbf{n}_{\dAccBias}}
         %
         % Transpose
-            \def\dAccBiasNoiseTrans{\dAccBiasNoise^{\top}}
+            \newcommand\dAccBiasNoiseTrans{\dAccBiasNoise^{\top}}
         %
     %
