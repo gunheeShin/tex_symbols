@@ -1,52 +1,54 @@
 % Pose
     % True
-        \def\dPose{\mathbf{T}}
+        \newcommand\dPose{\mathbf{T}}
 
-        \def\dIthPose{\dPose_{i}}
+        \newcommand\dIthPose{\dPose_{i}}
 
-        \def\dPoseFromIdxIToJ{\dPose_{ij}}
-        \def\dPoseFromIdxIToK{\dPose_{ik}}
-        \def\dPoseFromIdxKToJ{\dPose_{kj}}
+        \newcommand\dPoseFromIdxIToJ{\dPose_{ij}}
+        \newcommand\dPoseFromIdxIToK{\dPose_{ik}}
+        \newcommand\dPoseFromIdxKToJ{\dPose_{kj}}
 
-        \def\dPoseFromFrameIMUToLidar{\dPose_{\dIMUFrame\dLidarFrame}}
-        \def\dPoseFromFrameWorldToIMU{\dPose_{\dWorldFrame\dIMUFrame}}
+        \newcommand\dPoseFromFrameIMUToLidar{\dPose_{\dIMUFrame\dLidarFrame}}
+        \newcommand\dPoseFromFrameWorldToIMU{\dPose_{\dIMUFrame}}
 
-        \def\dPoseFromFrameWorldToIthIMU{\dPose_{\dWorldFrame\dIthIMUFrame}}
-        \def\dPoseFromFrameWorldToKthIMU{\dPose_{\dWorldFrame\dKthIMUFrame}}
-        \def\dPoseFromFrameKthIMUToIthIMU{\dPose_{\dKthIMUFrame\dIthIMUFrame}}
-        \def\dPoseFromFrameKthIMUToJthIMU{\dPose_{\dKthIMUFrame\dJthIMUFrame}}
+        \newcommand\dPoseFromFrameWorldToIthIMU{\dPose_{\dIthIMUFrame}}
+        \newcommand\dPoseFromFrameWorldToKthIMU{\dPose_{\dKthIMUFrame}}
+        \newcommand\dPoseFromFrameWorldToJthIMU{\dPose_{\dJthIMUFrame}}
+        \newcommand\dPoseFromFrameKthIMUToIthIMU{\dPose_{\dKthIMUFrame\dIthIMUFrame}}
+        \newcommand\dPoseFromFrameKthIMUToJthIMU{\dPose_{\dKthIMUFrame\dJthIMUFrame}}
 
-        \def\dPoseInvFromIdxIToK{\dPose_{ik}^{-1}}
+        \newcommand\dPoseInvFromIdxIToK{\dPose_{ik}^{-1}}
 
         % Inverse
-            \def\dPoseInv{\dPose^{-1}}
+            \newcommand\dPoseInv{\dPose^{-1}}
 
-            \def\dPoseInvFromFrameWorldToKthIMU{\dPoseInv_{\dWorldFrame\dKthIMUFrame}}
+            \newcommand\dPoseInvFromFrameWorldToKthIMU{\dPoseInv_{\dKthIMUFrame}}
             
     %
     % Nominal
-        \def\dPoseNom{\hat{\dPose}}
+        \newcommand\dPoseNom{\hat{\dPose}}
 
-        \def\dPoseNomFromIdxIToJ{\dPoseNom_{ij}}
-        \def\dPoseNomFromIdxIToK{\dPoseNom_{ik}}
-        \def\dPoseNomFromIdxKToJ{\dPoseNom_{kj}}
+        \newcommand\dPoseNomFromIdxIToJ{\dPoseNom_{ij}}
+        \newcommand\dPoseNomFromIdxIToK{\dPoseNom_{ik}}
+        \newcommand\dPoseNomFromIdxKToJ{\dPoseNom_{kj}}
 
-        \def\dPoseNomInvFromIdxIToJ{\dPoseNom_{ij}^{-1}}
-        \def\dPoseNomInvFromIdxIToK{\dPoseNom_{ik}^{-1}}
-        \def\dPoseNomInvFromIdxKToJ{\dPoseNom_{kj}^{-1}}
+        \newcommand\dPoseNomInvFromIdxIToJ{\dPoseNom_{ij}^{-1}}
+        \newcommand\dPoseNomInvFromIdxIToK{\dPoseNom_{ik}^{-1}}
+        \newcommand\dPoseNomInvFromIdxKToJ{\dPoseNom_{kj}^{-1}}
         
-        \def\dPoseNomFromFrameWorldToIthIMU{\dPoseNom_{\dWorldFrame\dIthIMUFrame}}
+        \newcommand\dPoseNomFromFrameWorldToIthIMU{\dPoseNom_{\dIthIMUFrame}}
+        \newcommand\dPoseNomFromFrameWorldToJthIMU{\dPoseNom_{\dJthIMUFrame}}
 
-        \def\dPoseNomFromFrameKthIMUToIthIMU{\dPoseNom_{\dKthIMUFrame\dIthIMUFrame}}
-        \def\dPoseNomFromFrameWorldToIthIMU{\dPoseNom_{\dWorldFrame\dIthIMUFrame}}
-        \def\dPoseNomFromFrameKthIMUToJthIMU{\dPoseNom_{\dKthIMUFrame\dJthIMUFrame}}
-        \def\dPoseNomFromFrameWorldToKthIMU{\dPoseNom_{\dWorldFrame\dKthIMUFrame}}
+        \newcommand\dPoseNomFromFrameKthIMUToIthIMU{\dPoseNom_{\dKthIMUFrame\dIthIMUFrame}}
+        \newcommand\dPoseNomFromFrameKthIMUToJthIMU{\dPoseNom_{\dKthIMUFrame\dJthIMUFrame}}
+        \newcommand\dPoseNomFromFrameWorldToKthIMU{\dPoseNom_{\dKthIMUFrame}}
+        \newcommand\dPoseNomInvFromFrameKthIMUToJthIMU{\dPoseNomInv_{\dKthIMUFrame\dJthIMUFrame}}
         
         % Inverse
-            \def\dPoseNomInv{\dPoseNom^{-1}}
+            \newcommand\dPoseNomInv{\dPoseNom^{-1}}
 
-            \def\dPoseNomInvFromFrameWorldToKthIMU{\dPoseNomInv_{\dWorldFrame\dKthIMUFrame}}
-            \def\dPoseNomInvFromFrameKthIMUToIthIMU{\dPoseNomInv_{\dKthIMUFrame\dIthIMUFrame}}
+            \newcommand\dPoseNomInvFromFrameWorldToKthIMU{\dPoseNomInv_{\dKthIMUFrame}}
+            \newcommand\dPoseNomInvFromFrameKthIMUToIthIMU{\dPoseNomInv_{\dKthIMUFrame\dIthIMUFrame}}
         %
 
     %
@@ -54,63 +56,66 @@
 
 % Pose Perturbation
     % True
-        \def\dPosePert{\boldsymbol{\xi}}
+        \newcommand\dPosePert{\boldsymbol{\xi}}
 
-        \def\dPosePertFromIdxIToJ{\dPosePert_{ij}}
-        \def\dPosePertFromIdxIToK{\dPosePert_{ik}}
-        \def\dPosePertFromIdxKToJ{\dPosePert_{kj}}
+        \newcommand\dPosePertFromIdxIToJ{\dPosePert_{ij}}
+        \newcommand\dPosePertFromIdxIToK{\dPosePert_{ik}}
+        \newcommand\dPosePertFromIdxKToJ{\dPosePert_{kj}}
 
-        \def\dPosePertFromFrameWorldToIMU{\dPosePert_{\dWorldFrame\dIMUFrame}}
+        \newcommand\dPosePertFromFrameWorldToIMU{\dPosePert_{\dIMUFrame}}
 
-        \def\dPosePertFromFrameWorldToIthIMU{\dPosePert_{\dWorldFrame\dIthIMUFrame}}
-        \def\dPosePertFromFrameWorldToKthIMU{\dPosePert_{\dWorldFrame\dKthIMUFrame}}
-        \def\dPosePertFromFrameKthIMUToIthIMU{\dPosePert_{\dKthIMUFrame\dIthIMUFrame}}
-        \def\dPosePertFromFrameKthIMUToJthIMU{\dPosePert_{\dKthIMUFrame\dJthIMUFrame}}
+        \newcommand\dPosePertFromFrameWorldToIthIMU{\dPosePert_{\dIthIMUFrame}}
+        \newcommand\dPosePertFromFrameWorldToJthIMU{\dPosePert_{\dJthIMUFrame}}
+        \newcommand\dPosePertFromFrameWorldToKthIMU{\dPosePert_{\dKthIMUFrame}}
+        \newcommand\dPosePertFromFrameKthIMUToIthIMU{\dPosePert_{\dKthIMUFrame\dIthIMUFrame}}
+        \newcommand\dPosePertFromFrameKthIMUToJthIMU{\dPosePert_{\dKthIMUFrame\dJthIMUFrame}}
         
         % transpose
-            \def\dPosePertTrans{\dPosePert^{\top}}
+            \newcommand\dPosePertTrans{\dPosePert^{\top}}
 
-            \def\dPosePertTransFromIdxIToJ{\dPosePertTrans_{ij}}
-            \def\dPosePertTransFromIdxIToK{\dPosePertTrans_{ik}}
-            \def\dPosePertTransFromIdxKToJ{\dPosePertTrans_{kj}}
+            \newcommand\dPosePertTransFromIdxIToJ{\dPosePertTrans_{ij}}
+            \newcommand\dPosePertTransFromIdxIToK{\dPosePertTrans_{ik}}
+            \newcommand\dPosePertTransFromIdxKToJ{\dPosePertTrans_{kj}}
 
-            \def\dPosePertTransFromFrameKthIMUToIthIMU{\dPosePertTrans_{\dKthIMUFrame\dIthIMUFrame}}
+            \newcommand\dPosePertTransFromFrameKthIMUToIthIMU{\dPosePertTrans_{\dKthIMUFrame\dIthIMUFrame}}
+            \newcommand\dPosePertTransFromFrameKthIMUToJthIMU{\dPosePertTrans_{\dKthIMUFrame\dJthIMUFrame}}
         %
 
         % skew
-            \def\dPosePertSkew{\dPosePert^{\wedge}}
+            \newcommand\dPosePertSkew{\dPosePert^{\wedge}}
 
-            \def\dPosePertSkewFromIdxIToJ{\dPosePertSkew_{ij}}
-            \def\dPosePertSkewFromIdxIToK{\dPosePertSkew_{ik}}
-            \def\dPosePertSkewFromIdxKToJ{\dPosePertSkew_{kj}}
+            \newcommand\dPosePertSkewFromIdxIToJ{\dPosePertSkew_{ij}}
+            \newcommand\dPosePertSkewFromIdxIToK{\dPosePertSkew_{ik}}
+            \newcommand\dPosePertSkewFromIdxKToJ{\dPosePertSkew_{kj}}
             
-            \def\dPosePertSkewFromFrameWorldToIthIMU{\dPosePertSkew_{\dWorldFrame\dIthIMUFrame}}
+            \newcommand\dPosePertSkewFromFrameWorldToIthIMU{\dPosePertSkew_{\dIthIMUFrame}}
+            \newcommand\dPosePertSkewFromFrameWorldToJthIMU{\dPosePertSkew_{\dJthIMUFrame}}
 
-            \def\dPosePertSkewFromFrameWorldToKthIMU{\dPosePertSkew_{\dWorldFrame\dKthIMUFrame}}
-            \def\dPosePertSkewFromFrameKthIMUToIthIMU{\dPosePertSkew_{\dKthIMUFrame\dIthIMUFrame}}
-            \def\dPosePertSkewFromFrameKthIMUToJthIMU{\dPosePertSkew_{\dKthIMUFrame\dJthIMUFrame}}
+            \newcommand\dPosePertSkewFromFrameWorldToKthIMU{\dPosePertSkew_{\dKthIMUFrame}}
+            \newcommand\dPosePertSkewFromFrameKthIMUToIthIMU{\dPosePertSkew_{\dKthIMUFrame\dIthIMUFrame}}
+            \newcommand\dPosePertSkewFromFrameKthIMUToJthIMU{\dPosePertSkew_{\dKthIMUFrame\dJthIMUFrame}}
         %
         % prime
-            \def\dPosePertPrime{\dPosePert^{\prime}}
+            \newcommand\dPosePertPrime{\dPosePert^{\prime}}
 
-            \def\dPosePertPrimeFromIdxIToK{\dPosePertPrime_{ik}}
+            \newcommand\dPosePertPrimeFromIdxIToK{\dPosePertPrime_{ik}}
 
-            \def\dPosePertPrimeFromFrameWorldToKthIMU{\dPosePertPrime_{\dWorldFrame\dKthIMUFrame}}
+            \newcommand\dPosePertPrimeFromFrameWorldToKthIMU{\dPosePertPrime_{\dKthIMUFrame}}
 
             % skew
-                \def\dPosePertPrimeSkew{\dPosePert^{\prime\wedge}}
+                \newcommand\dPosePertPrimeSkew{\dPosePert^{\prime\wedge}}
 
-                \def\dPosePertPrimeSkewFromIdxIToK{\dPosePertPrimeSkew_{ik}}
+                \newcommand\dPosePertPrimeSkewFromIdxIToK{\dPosePertPrimeSkew_{ik}}
 
-                \def\dPosePertPrimeSkewFromFrameWorldToKthIMU{\dPosePertPrimeSkew_{\dWorldFrame\dKthIMUFrame}}
+                \newcommand\dPosePertPrimeSkewFromFrameWorldToKthIMU{\dPosePertPrimeSkew_{\dKthIMUFrame}}
             %
 
             % curly wedge
-                \def\dPosePertPrimeCurwed{\dPosePert^{\prime\curlywedge}}
+                \newcommand\dPosePertPrimeCurwed{\dPosePert^{\prime\curlywedge}}
 
-                \def\dPosePertPrimeCurwedFromIdxIToK{\dPosePertPrimeCurwed_{ik}}
+                \newcommand\dPosePertPrimeCurwedFromIdxIToK{\dPosePertPrimeCurwed_{ik}}
 
-                \def\dPosePertPrimeCurwedFromFrameWorldToKthIMU{\dPosePertPrimeCurwed_{\dWorldFrame\dKthIMUFrame}}
+                \newcommand\dPosePertPrimeCurwedFromFrameWorldToKthIMU{\dPosePertPrimeCurwed_{\dKthIMUFrame}}
             %
         %
     %
@@ -118,55 +123,55 @@
 
 % Pose Covariance
     % True
-        \def\dPoseCov{\mathbf{\Sigma}}
+        \newcommand\dPoseCov{\mathbf{\Sigma}}
 
-        \def\dPoseCovFromIdxIToJ{\dPoseCov_{ij}}
-        \def\dPoseCovFromIdxIToK{\dPoseCov_{ik}}
-        \def\dPoseCovFromIdxKToJ{\dPoseCov_{kj}}
-        \def\dPoseCovFromIdxJToK{\dPoseCov_{jk}}
+        \newcommand\dPoseCovFromIdxIToJ{\dPoseCov_{ij}}
+        \newcommand\dPoseCovFromIdxIToK{\dPoseCov_{ik}}
+        \newcommand\dPoseCovFromIdxKToJ{\dPoseCov_{kj}}
+        \newcommand\dPoseCovFromIdxJToK{\dPoseCov_{jk}}
     %
 
 %
 
 % Rotation
     % True
-        \def\dRot{\mathbf{R}}
+        \newcommand\dRot{\mathbf{R}}
 
-        \def\dIthRot{\dRot_{i}}
+        \newcommand\dIthRot{\dRot_{i}}
 
-        \def\dRotFromIdxIToJ{\dRot_{ij}}
-        \def\dRotFromIdxIToK{\dRot_{ik}}
-        \def\dRotFromIdxKToJ{\dRot_{kj}}
+        \newcommand\dRotFromIdxIToJ{\dRot_{ij}}
+        \newcommand\dRotFromIdxIToK{\dRot_{ik}}
+        \newcommand\dRotFromIdxKToJ{\dRot_{kj}}
 
-        \def\dRotFromFrameWorldToIMU{\dRot_{\dWorldFrame \dIMUFrame}}
+        \newcommand\dRotFromFrameWorldToIMU{\dRot_{\dWorldFrame \dIMUFrame}}
     %
     % Nominal
-        \def\dRotNom{\hat{\dRot}}
+        \newcommand\dRotNom{\hat{\dRot}}
 
         % inverse
-            \def\dRotNomInv{\dRotNom^{-1}}
+            \newcommand\dRotNomInv{\dRotNom^{-1}}
         %
     %
     % Transpose
-        \def\dRotTrans{\dRot^{\top}}
+        \newcommand\dRotTrans{\dRot^{\top}}
 
-        \def\dIthRotTrans{\dRotTrans_{i}}
+        \newcommand\dIthRotTrans{\dRotTrans_{i}}
 
         
 %
 
 % Rotation Perturbation
     % True
-        \def\dRotPert{\boldsymbol{\theta}}
+        \newcommand\dRotPert{\boldsymbol{\theta}}
 
-        \def\dRotPertFromIdxIToJ{\dRotPert_{ij}}
-        \def\dRotPertFromIdxIToK{\dRotPert_{ik}}
-        \def\dRotPertFromIdxKToJ{\dRotPert_{kj}}
+        \newcommand\dRotPertFromIdxIToJ{\dRotPert_{ij}}
+        \newcommand\dRotPertFromIdxIToK{\dRotPert_{ik}}
+        \newcommand\dRotPertFromIdxKToJ{\dRotPert_{kj}}
 
-        \def\dRotPertFromFrameWorldToIMU{\dRotPert_{\dWorldFrame \dIMUFrame}}
+        \newcommand\dRotPertFromFrameWorldToIMU{\dRotPert_{\dWorldFrame \dIMUFrame}}
 
         % Trans
-            \def\dRotPertTrans{\dRotPert^{\top}}
+            \newcommand\dRotPertTrans{\dRotPert^{\top}}
         %
 
     %
@@ -174,26 +179,26 @@
 
 % Translation
     % True
-        \def\dTls{\mathbf{t}}
+        \newcommand\dTls{\mathbf{t}}
 
-        \def\dIthTls{\dTls_{i}}
+        \newcommand\dIthTls{\dTls_{i}}
 
-        \def\dTlsFromIdxIToJ{\dTls_{ij}}
-        \def\dTlsFromIdxIToK{\dTls_{ik}}
-        \def\dTlsFromIdxKToJ{\dTls_{kj}}
+        \newcommand\dTlsFromIdxIToJ{\dTls_{ij}}
+        \newcommand\dTlsFromIdxIToK{\dTls_{ik}}
+        \newcommand\dTlsFromIdxKToJ{\dTls_{kj}}
 
-        \def\dTlsFromFrameWorldToIMU{\dTls_{\dWorldFrame \dIMUFrame}}
+        \newcommand\dTlsFromFrameWorldToIMU{\dTls_{\dWorldFrame \dIMUFrame}}
     %
 %
 
 % Translation Perturbation
     % True
-        \def\dTlsPert{\tilde{\dTls}}
+        \newcommand\dTlsPert{\tilde{\dTls}}
 
-        \def\dTlsPertFromFrameWorldToIMU{\dTlsPert_{\dWorldFrame \dIMUFrame}}
+        \newcommand\dTlsPertFromFrameWorldToIMU{\dTlsPert_{\dWorldFrame \dIMUFrame}}
 
         % Trans
-            \def\dTlsPertTrans{\dTlsPert^{\top}}
+            \newcommand\dTlsPertTrans{\dTlsPert^{\top}}
         %
     %
 %

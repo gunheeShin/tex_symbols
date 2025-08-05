@@ -1,58 +1,59 @@
 % Point
     % Normal
-        \def\dPt{\mathbf{p}}
+        \newcommand\dPt{\mathbf{p}}
 
-        \def\dIthPt{\dPt_{i}}
-        \def\dJthPt{\dPt_{j}}
-        \def\dKthPt{\dPt_{k}}
+        \newcommand\dIthPt{\dPt_{i}}
+        \newcommand\dJthPt{\dPt_{j}}
+        \newcommand\dKthPt{\dPt_{k}}
 
-        \def\dJthPtInJthLidarFrame{{}^{\dJthLidarFrame} \dPt_{j}}
-        \def\dJthPtInKthIMUFrame{{}^{\dKthIMUFrame} \dPt_{j}}
+        \newcommand\dJthPtInJthLidarFrame{{}^{\dJthLidarFrame} \dPt_{j}}
+        \newcommand\dJthPtInKthIMUFrame{{}^{\dKthIMUFrame} \dPt_{j}}
 
         % Homogeneous
-            \def\dPtHomo{\dPt^{\mathrm{h}}}
+            \newcommand\dPtHomo{\dPt^{\mathrm{h}}}
 
-            \def\dJthPtHomoInJthLidarFrame{{}^{\dJthLidarFrame} \dPtHomo_{j}}
-            \def\dJthPtHomoInKthIMUFrame{{}^{\dKthIMUFrame} \dPtHomo_{j}}
-            \def\dJthPtHomoInJthIMUFrame{{}^{\dJthIMUFrame} \dPtHomo_{j}}
+            \newcommand\dJthPtHomoInJthLidarFrame{{}^{\dJthLidarFrame} \dPtHomo_{j}}
+            \newcommand\dJthPtHomoInKthIMUFrame{{}^{\dKthIMUFrame} \dPtHomo_{j}}
+            \newcommand\dJthPtHomoInJthIMUFrame{{}^{\dJthIMUFrame} \dPtHomo_{j}}
         %
 
         % Transpose
-            \def\dPtTrans{\dPt^{\top}}
+            \newcommand\dPtTrans{\dPt^{\top}}
 
             
     %
 
     % Nominal
-        \def\dPtNom{\hat{\dPt}}
+        \newcommand\dPtNom{\hat{\dPt}}
 
-        \def\dJthPtNomInKthIMUFrame{{}^{\dKthIMUFrame} \dPtNom_{j}}
+        \newcommand\dJthPtNomInKthIMUFrame{{}^{\dKthIMUFrame} \dPtNom_{j}}
         % Homogeneous
-            \def\dPtNomHomo{\dPtNom^{\mathrm{h}}}
+            \newcommand\dPtNomHomo{\dPtNom^{\mathrm{h}}}
 
-            \def\dJthPtNomHomoInJthLidarFrame{{}^{\dJthLidarFrame} \dPtNomHomo_{j}}
-            \def\dJthPtNomHomoInKthIMUFrame{{}^{\dKthIMUFrame} \dPtNomHomo_{j}}
-            \def\dJthPtNomHomoInJthIMUFrame{{}^{\dJthIMUFrame} \dPtNomHomo_{j}}
+            \newcommand\dJthPtNomHomoInJthLidarFrame{{}^{\dJthLidarFrame} \dPtNomHomo_{j}}
+            \newcommand\dJthPtNomHomoInKthIMUFrame{{}^{\dKthIMUFrame} \dPtNomHomo_{j}}
+            \newcommand\dJthPtNomHomoInJthIMUFrame{{}^{\dJthIMUFrame} \dPtNomHomo_{j}}
         %
     %
 %
 
 % Point Noise
     % Normal
-        \def\dPtNoise{\mathbf{n}_{\dPt}}
+        \newcommand\dPtNoise{\mathbf{n}_{\dPt}}
 
-        \def\dIthPtNoise{\mathbf{n}_{\dIthPt}}
-        \def\dJthPtNoise{\mathbf{n}_{\dJthPt}}
-        \def\dKthPtNoise{\mathbf{n}_{\dKthPt}}
+        \newcommand\dIthPtNoise{\mathbf{n}_{\dIthPt}}
+        \newcommand\dJthPtNoise{\mathbf{n}_{\dJthPt}}
+        \newcommand\dKthPtNoise{\mathbf{n}_{\dKthPt}}
 
-        \def\dJthPtNoiseInKthIMUFrame{{}^{\dKthIMUFrame} \mathbf{n}_{\dJthPt}}
+        \newcommand\dJthPtNoiseInKthIMUFrame{{}^{\dKthIMUFrame} \mathbf{n}_{\dJthPt}}
+        \newcommand\dJthPtNoiseInJthIMUFrame{{}^{\dJthIMUFrame} \mathbf{n}_{\dJthPt}}
 
         % Dialated
-            \def\dPtNoiseDil{\mathbf{n}_{\dPt}^{\mathrm{d}}}
+            \newcommand\dPtNoiseDil{\mathbf{n}^{\mathrm{d}}}
 
-            \def\dJthPtNoiseDilInJthLidarFrame{{}^{\dJthLidarFrame} \mathbf{n}_{\dJthPt}^{\mathrm{d}}}
-            \def\dJthPtNoiseDilInKthIMUFrame{{}^{\dKthIMUFrame} \mathbf{n}_{\dJthPt}^{\mathrm{d}}}
-            \def\dJthPtNoiseDilInJthIMUFrame{{}^{\dJthIMUFrame} \mathbf{n}_{\dJthPt}^{\mathrm{d}}}
+            \newcommand\dJthPtNoiseDilInJthLidarFrame{{}^{\dJthLidarFrame} \mathbf{n}_{\dJthPt}^{\mathrm{d}}}
+            \newcommand\dJthPtNoiseDilInKthIMUFrame{{}^{\dKthIMUFrame} \mathbf{n}_{\dJthPt}^{\mathrm{d}}}
+            \newcommand\dJthPtNoiseDilInJthIMUFrame{{}^{\dJthIMUFrame} \mathbf{n}_{\dJthPt}^{\mathrm{d}}}
         %
     %
 %
@@ -60,36 +61,36 @@
 
 % Bearing
     % Normal
-        \def\dBearing{\boldsymbol{\phi}}
+        \newcommand\dBearing{\boldsymbol{\phi}}
     %
     % Nominal
-        \def\dBearingNom{\hat{\dBearing}}
+        \newcommand\dBearingNom{\hat{\dBearing}}
     %
     % Perturbation
-        \def\dBearingPert{\tilde{\dBearing}}
+        \newcommand\dBearingPert{\tilde{\dBearing}}
     %
 %
 
 % Bearing Covariance
     % Normal
-        \def\dBearingCov{\mathbf{\Sigma}_{\dBearing}}
+        \newcommand\dBearingCov{\mathbf{\Sigma}_{\dBearing}}
     %
 %
 
 % Range
     % Normal
-        \def\dRange{\mathrm{d}}
+        \newcommand\dRange{\mathrm{d}}
     %
     % Nominal
-        \def\dRangeNom{\hat{\dRange}}
+        \newcommand\dRangeNom{\hat{\dRange}}
     %
     % Perturbation
-        \def\dRangePert{\tilde{\dRange}}
+        \newcommand\dRangePert{\tilde{\dRange}}
     %
 %
 
 % Range Covariance
     % Normal
-        \def\dRangeCov{\Sigma_{\dRange}}
+        \newcommand\dRangeCov{\Sigma_{\dRange}}
     %
 %
