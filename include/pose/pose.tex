@@ -129,6 +129,8 @@
         \newcommand\dPoseCovFromIdxIToK{\dPoseCov_{ik}}
         \newcommand\dPoseCovFromIdxKToJ{\dPoseCov_{kj}}
         \newcommand\dPoseCovFromIdxJToK{\dPoseCov_{jk}}
+
+        \newcommand\dPoseCovFromFrameKthIMUToJthIMU{\dPoseCov_{\dKthIMUFrame\dJthIMUFrame}}
     %
 
 %
@@ -188,6 +190,12 @@
         \newcommand\dTlsFromIdxKToJ{\dTls_{kj}}
 
         \newcommand\dTlsFromFrameWorldToIMU{\dTls_{\dWorldFrame \dIMUFrame}}
+
+        % Transpose
+            \newcommand\dTlsTrans{\dTls^{\top}}
+
+            \newcommand\dIthTlsTrans{\dTlsTrans_{i}}
+        %
     %
 %
 

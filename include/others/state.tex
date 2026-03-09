@@ -12,7 +12,7 @@
         %
     %
     % Nominal
-        \newcommand\dStateNom{\bar{\dState}}
+        \newcommand\dStateNom{\hat{\dState}}
 
         \newcommand\dIthStateNom{\dStateNom_{i}}
         \newcommand\dKthStateNom{\dStateNom_{k}}
@@ -54,12 +54,30 @@
 
         \newcommand\dIthVelWorld{\dVelWorld_{i}}
 
+        % Transpose
+            \newcommand\dVelWorldTrans{\dVelWorld^{\top}}
+
+            \newcommand\dIthVelWorldTrans{\dVelWorldTrans_{i}}
+        %
+
     % Velocity in Body frame
         \newcommand\dVelBody{ {}^{\dBodyFrame} \dVel}
         \newcommand\dIthVelBody{\dVelBody_{i}}
 
+        % Transpose
+            \newcommand\dVelBodyTrans{\dVelBody^{\top}}
+
+            \newcommand\dIthVelBodyTrans{\dVelBodyTrans_{i}}
+        %
+
     %
 %
+
+% Twist
+    % True
+        \newcommand\dTwist{\boldsymbol{\zeta}}
+
+        \newcommand\dIthTwist{\dTwist_{i}}
 
 % Biases
     % gyroscope
@@ -69,7 +87,7 @@
 
         \newcommand\dIthGyroBias{\dGyroBias_{i}}
         % Error
-            \newcommand\dGyroBiasErr{\tilde{\dGyroBias}}
+            \newcommand\dGyroBiasErr{\tilde{\mathbf{b}}^{\dGyro}}
         %
     %
     % accelerometer
@@ -79,7 +97,7 @@
 
         \newcommand\dIthAccBias{\dAccBias_{i}}
         % Error
-            \newcommand\dAccBiasErr{\tilde{\dAccBias}}
+            \newcommand\dAccBiasErr{\tilde{\mathbf{b}}^{\dAcc}}
         %
     %
 %
