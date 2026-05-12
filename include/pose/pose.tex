@@ -157,6 +157,8 @@
     % Nominal
         \newcommand\dRotNom{\hat{\dRot}}
 
+        \newcommand\dRotNomFromFrameLidarToRadar{\dRotNom_{\dLidarFrame\dRadarFrame}}
+
         % inverse
             \newcommand\dRotNomInv{\dRotNom^{-1}}
         %
@@ -201,6 +203,12 @@
         \newcommand\dTlsFromFrameLidarToRadar{\dTls_{\dLidarFrame\dRadarFrame}}
 
         \newcommand\dTlsFromFrameWorldToIMU{\dTls_{\dWorldFrame \dIMUFrame}}
+
+    %
+    % Nominal
+        \newcommand\dTlsNom{\hat{\dTls}}
+
+        \newcommand\dTlsNomFromFrameLidarToRadar{\dTlsNom_{\dLidarFrame\dRadarFrame}}
 
         % Transpose
             \newcommand\dTlsTrans{\dTls^{\top}}

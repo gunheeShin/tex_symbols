@@ -10,8 +10,10 @@
         \newcommand\dPtInCameraFrame{{}^{\dCameraFrame} \dPt}
         \newcommand\dPtInRadarFrame{{}^{\dRadarFrame} \dPt}
 
-        \newcommand\dRadarPtInRadarFrame{{}^{\dRadarFrame} \dRadarPt} % For readability in the context of radar noise filtering    
+        \newcommand\dRadarPtInRadarFrame{{}^{\dRadarFrame} \dRadarPt} % For readability in the context of radar noise filtering
         \newcommand\dRadarPtInLidarFrame{{}^{\dLidarFrame} \dRadarPt} % For readability in the context of radar noise filtering
+        \newcommand\dRadarPtNomInLidarFrame{{}^{\dLidarFrame} \dPtNom_{\dRadarFrame}} % nominal projection of a radar point into LiDAR frame (using initial extrinsics)
+        \newcommand\dLidarPtNn{\dLidarPt^{*}} % nearest LiDAR neighbor in LiDAR frame
 
         \newcommand\dIthPt{\dPt_{i}}
         \newcommand\dJthPt{\dPt_{j}}

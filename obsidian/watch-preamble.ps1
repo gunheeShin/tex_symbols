@@ -32,29 +32,45 @@ $watcher.Filter                = "*.tex"
 $watcher.IncludeSubdirectories = $true
 $watcher.EnableRaisingEvents   = $true
 
-# Debounce: skip duplicate events fired within 500ms
-$script:lastBuild = [DateTime]::MinValue
+# Catch up any changes that happened before the watcher started.
+Write-Host "Running initial build to sync preamble.sty..." -ForegroundColor DarkGray
+try {
+    & $buildScript
+} catch {
+    Write-Host "  Initial build failed: $_" -ForegroundColor Red
+}
+
+# Shared context between event handler invocations.
+# (Windows PowerShell 5.1 cannot use $using: inside Register-ObjectEvent -Action,
+#  so we pass state in via -MessageData as a mutable hashtable.)
+$ctx = @{
+    BuildScript = $buildScript
+    LastBuild   = [DateTime]::MinValue
+}
 
 $action = {
-    $now = Get-Date
-    if (($now - $script:lastBuild).TotalMilliseconds -lt 500) { return }
-    $script:lastBuild = $now
-
-    $changed = $Event.SourceEventArgs.Name
-    Write-Host "[$($now.ToString('HH:mm:ss'))] Changed: $changed" -ForegroundColor Yellow
-
-    Start-Sleep -Milliseconds 100
     try {
-        & $using:buildScript
+        $ctx = $Event.MessageData
+        $now = Get-Date
+
+        # Debounce: skip duplicate events fired within 500ms
+        if (($now - $ctx.LastBuild).TotalMilliseconds -lt 500) { return }
+        $ctx.LastBuild = $now
+
+        $changed = $Event.SourceEventArgs.Name
+        Write-Host "[$($now.ToString('HH:mm:ss'))] Changed: $changed" -ForegroundColor Yellow
+
+        Start-Sleep -Milliseconds 100
+        & $ctx.BuildScript
     } catch {
         Write-Host "  Build failed: $_" -ForegroundColor Red
     }
 }
 
-Register-ObjectEvent $watcher Changed -Action $action | Out-Null
-Register-ObjectEvent $watcher Created -Action $action | Out-Null
-Register-ObjectEvent $watcher Deleted -Action $action | Out-Null
-Register-ObjectEvent $watcher Renamed -Action $action | Out-Null
+Register-ObjectEvent $watcher Changed -Action $action -MessageData $ctx | Out-Null
+Register-ObjectEvent $watcher Created -Action $action -MessageData $ctx | Out-Null
+Register-ObjectEvent $watcher Deleted -Action $action -MessageData $ctx | Out-Null
+Register-ObjectEvent $watcher Renamed -Action $action -MessageData $ctx | Out-Null
 
 Write-Host "Watching $watchDir" -ForegroundColor Cyan
 Write-Host "  -> rebuilds preamble.sty on .tex change (hot-reload in Obsidian)" -ForegroundColor Cyan
