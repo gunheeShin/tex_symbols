@@ -7,19 +7,19 @@
 # The MathJax Preamble Manager plugin (Obsidian) detects the
 # preamble.sty change and hot-reloads -- no Ctrl+R needed.
 #
-# Usage:
-#   pwsh -ExecutionPolicy Bypass -File tex/watch-preamble.ps1
+# Usage (from vault root):
+#   pwsh -ExecutionPolicy Bypass -File tex/obsidian/watch-preamble.ps1
 #
-# PowerShell profile alias (recommended):
+# PowerShell profile alias:
 #   function watch-tex {
-#       pwsh -ExecutionPolicy Bypass -File "C:\path\to\vault\tex\watch-preamble.ps1"
+#       pwsh -ExecutionPolicy Bypass -File "C:\path\to\vault\tex\obsidian\watch-preamble.ps1"
 #   }
 # =============================================================
 
 $ErrorActionPreference = "Stop"
-$texDir      = $PSScriptRoot
+$texDir      = Split-Path $PSScriptRoot -Parent         # tex/
 $watchDir    = Join-Path $texDir "include"
-$buildScript = Join-Path $texDir "build-preamble.ps1"
+$buildScript = Join-Path $PSScriptRoot "build-preamble.ps1"
 
 if (-not (Test-Path $watchDir)) {
     Write-Error "Cannot find $watchDir"

@@ -1,19 +1,18 @@
 # =============================================================
 # build-preamble.ps1
 #
-# Concatenates include/**/*.tex into ../preamble.sty
-# (one level up = Obsidian vault root).
+# Concatenates include/**/*.tex into preamble.sty at vault root.
 #
 # Input order is derived from main.tex \input{...} lines,
 # so editing main.tex automatically updates the build order.
 #
-# Usage:
-#   pwsh -ExecutionPolicy Bypass -File tex/build-preamble.ps1
+# Usage (from vault root):
+#   pwsh -ExecutionPolicy Bypass -File tex/obsidian/build-preamble.ps1
 # =============================================================
 
 $ErrorActionPreference = "Stop"
-$texDir     = $PSScriptRoot
-$vaultRoot  = Split-Path $texDir -Parent
+$texDir     = Split-Path $PSScriptRoot -Parent          # tex/
+$vaultRoot  = Split-Path $texDir -Parent                # vault root
 $includeDir = Join-Path $texDir "include"
 $mainTex    = Join-Path $texDir "main.tex"
 $outFile    = Join-Path $vaultRoot "preamble.sty"
@@ -70,8 +69,8 @@ foreach ($rel in $relPaths) {
 }
 
 # --- 4. Write UTF-8 without BOM ----------------------------------------------
-$footer  = "`n`n\endinput`n"
-$content = $header + ($bodyParts -join "`n") + $footer
+$footer    = "`n`n\endinput`n"
+$content   = $header + ($bodyParts -join "`n") + $footer
 $utf8NoBom = New-Object System.Text.UTF8Encoding $false
 [System.IO.File]::WriteAllText($outFile, $content, $utf8NoBom)
 
