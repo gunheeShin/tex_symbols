@@ -2,6 +2,17 @@
     % Normal
         \newcommand\dPt{\mathbf{p}}
 
+        \newcommand\dLidarPt{\dPt_{\dLidarFrame}}
+        \newcommand\dRadarPt{\dPt_{\dRadarFrame}}
+
+        \newcommand\dPtInLidarFrame{{}^{\dLidarFrame} \dPt}
+        \newcommand\dPtInIMUFrame{{}^{\dIMUFrame} \dPt}
+        \newcommand\dPtInCameraFrame{{}^{\dCameraFrame} \dPt}
+        \newcommand\dPtInRadarFrame{{}^{\dRadarFrame} \dPt}
+
+        \newcommand\dRadarPtInRadarFrame{{}^{\dRadarFrame} \dRadarPt} % For readability in the context of radar noise filtering    
+        \newcommand\dRadarPtInLidarFrame{{}^{\dLidarFrame} \dRadarPt} % For readability in the context of radar noise filtering
+
         \newcommand\dIthPt{\dPt_{i}}
         \newcommand\dJthPt{\dPt_{j}}
         \newcommand\dKthPt{\dPt_{k}}
@@ -12,6 +23,9 @@
         % Homogeneous
             \newcommand\dPtHomo{\dPt^{\mathrm{h}}}
 
+            \newcommand\dRadarPtHomoInRadarFrame{{}^{\dRadarFrame} \dRadarPt^{\mathrm{h}}}
+            \newcommand\dRadarPtHomoInLidarFrame{{}^{\dLidarFrame} \dRadarPt^{\mathrm{h}}}
+
             \newcommand\dJthPtHomoInJthLidarFrame{{}^{\dJthLidarFrame} \dPtHomo_{j}}
             \newcommand\dJthPtHomoInKthIMUFrame{{}^{\dKthIMUFrame} \dPtHomo_{j}}
             \newcommand\dJthPtHomoInJthIMUFrame{{}^{\dJthIMUFrame} \dPtHomo_{j}}
@@ -20,7 +34,6 @@
         % Transpose
             \newcommand\dPtTrans{\dPt^{\top}}
 
-            
     %
 
     % Nominal

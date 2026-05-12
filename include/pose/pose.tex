@@ -9,6 +9,8 @@
         \newcommand\dPoseFromIdxKToJ{\dPose_{kj}}
 
         \newcommand\dPoseFromFrameIMUToLidar{\dPose_{\dIMUFrame\dLidarFrame}}
+        \newcommand\dPoseFromFrameRadarToLidar{\dPose_{\dRadarFrame\dLidarFrame}}
+        \newcommand\dPoseFromFrameLidarToRadar{\dPose_{\dLidarFrame\dRadarFrame}}
         \newcommand\dPoseFromFrameWorldToIMU{\dPose_{\dIMUFrame}}
 
         \newcommand\dPoseFromFrameWorldToIthIMU{\dPose_{\dIthIMUFrame}}
@@ -36,6 +38,8 @@
         \newcommand\dPoseNomInvFromIdxIToK{\dPoseNom_{ik}^{-1}}
         \newcommand\dPoseNomInvFromIdxKToJ{\dPoseNom_{kj}^{-1}}
         
+        \newcommand\dPoseNomFromFrameRadarToLidar{\dPoseNom_{\dRadarFrame\dLidarFrame}}
+
         \newcommand\dPoseNomFromFrameWorldToIthIMU{\dPoseNom_{\dIthIMUFrame}}
         \newcommand\dPoseNomFromFrameWorldToJthIMU{\dPoseNom_{\dJthIMUFrame}}
 
@@ -62,6 +66,7 @@
         \newcommand\dPosePertFromIdxIToK{\dPosePert_{ik}}
         \newcommand\dPosePertFromIdxKToJ{\dPosePert_{kj}}
 
+        \newcommand\dPosePertFromFrameLidarToRadar{\dPosePert_{\dLidarFrame\dRadarFrame}}
         \newcommand\dPosePertFromFrameWorldToIMU{\dPosePert_{\dIMUFrame}}
 
         \newcommand\dPosePertFromFrameWorldToIthIMU{\dPosePert_{\dIthIMUFrame}}
@@ -145,6 +150,8 @@
         \newcommand\dRotFromIdxIToK{\dRot_{ik}}
         \newcommand\dRotFromIdxKToJ{\dRot_{kj}}
 
+        \newcommand\dRotFromFrameLidarToRadar{\dRot_{\dLidarFrame\dRadarFrame}}
+
         \newcommand\dRotFromFrameWorldToIMU{\dRot_{\dWorldFrame \dIMUFrame}}
     %
     % Nominal
@@ -170,6 +177,8 @@
         \newcommand\dRotPertFromIdxIToK{\dRotPert_{ik}}
         \newcommand\dRotPertFromIdxKToJ{\dRotPert_{kj}}
 
+
+        \newcommand\dRotPertFromFrameLidarToRadar{\dRotPert_{\dLidarFrame\dRadarFrame}}
         \newcommand\dRotPertFromFrameWorldToIMU{\dRotPert_{\dWorldFrame \dIMUFrame}}
 
         % Trans
@@ -189,6 +198,8 @@
         \newcommand\dTlsFromIdxIToK{\dTls_{ik}}
         \newcommand\dTlsFromIdxKToJ{\dTls_{kj}}
 
+        \newcommand\dTlsFromFrameLidarToRadar{\dTls_{\dLidarFrame\dRadarFrame}}
+
         \newcommand\dTlsFromFrameWorldToIMU{\dTls_{\dWorldFrame \dIMUFrame}}
 
         % Transpose
@@ -203,6 +214,8 @@
     % True
         \newcommand\dTlsPert{\tilde{\dTls}}
 
+        
+        \newcommand\dTlsPertFromFrameLidarToRadar{\dTlsPert_{\dLidarFrame\dRadarFrame}}
         \newcommand\dTlsPertFromFrameWorldToIMU{\dTlsPert_{\dWorldFrame \dIMUFrame}}
 
         % Trans
