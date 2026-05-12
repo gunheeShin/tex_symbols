@@ -52,7 +52,7 @@ pwsh -ExecutionPolicy Bypass -File tex/obsidian/build-preamble.ps1
 ```powershell
 # tex_symbols watcher
 function watch-tex {
-    pwsh -ExecutionPolicy Bypass -File "C:\path\to\vault\tex\obsidian\watch-preamble.ps1"
+    powershell -ExecutionPolicy Bypass -File "C:\Users\gunma\ObsidianVault\tex\obsidian\watch-preamble.ps1"
 }
 ```
 
