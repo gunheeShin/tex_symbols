@@ -10,10 +10,9 @@
         \newcommand\dPtInCameraFrame{{}^{\dCameraFrame} \dPt}
         \newcommand\dPtInRadarFrame{{}^{\dRadarFrame} \dPt}
 
-        \newcommand\dRadarPtInRadarFrame{{}^{\dRadarFrame} \dRadarPt} % For readability in the context of radar noise filtering
-        \newcommand\dRadarPtInLidarFrame{{}^{\dLidarFrame} \dRadarPt} % For readability in the context of radar noise filtering
-        \newcommand\dRadarPtNomInLidarFrame{{}^{\dLidarFrame} \dPtNom_{\dRadarFrame}} % nominal projection of a radar point into LiDAR frame (using initial extrinsics)
-        \newcommand\dLidarPtNn{\dLidarPt^{*}} % nearest LiDAR neighbor in LiDAR frame
+        \newcommand\dRadarPtInRadarFrame{{}^{\dRadarFrame} \dRadarPt}
+        \newcommand\dRadarPtInLidarFrame{{}^{\dLidarFrame} \dRadarPt} 
+        \newcommand\dRadarPtNomInLidarFrame{{}^{\dLidarFrame} \dPtNom_{\dRadarFrame}} 
 
         \newcommand\dIthPt{\dPt_{i}}
         \newcommand\dJthPt{\dPt_{j}}
@@ -59,9 +58,11 @@
         \newcommand\dIthPtNoise{\mathbf{n}_{\dIthPt}}
         \newcommand\dJthPtNoise{\mathbf{n}_{\dJthPt}}
         \newcommand\dKthPtNoise{\mathbf{n}_{\dKthPt}}
+        \newcommand\dRadarPtNoise{\mathbf{n}_{\dRadarFrame}}
 
         \newcommand\dJthPtNoiseInKthIMUFrame{{}^{\dKthIMUFrame} \mathbf{n}_{\dJthPt}}
         \newcommand\dJthPtNoiseInJthIMUFrame{{}^{\dJthIMUFrame} \mathbf{n}_{\dJthPt}}
+        \newcommand\dRadarPtNoiseInLidarFrame{{}^{\dLidarFrame} \mathbf{n}_{\dRadarFrame}}
 
         % Dialated
             \newcommand\dPtNoiseDil{\mathbf{n}^{\mathrm{d}}}

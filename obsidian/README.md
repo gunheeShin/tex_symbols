@@ -5,8 +5,11 @@ Scripts and instructions for using `tex_symbols` macros in Obsidian via the
 
 ## Contents
 
-- `build-preamble.ps1` — concatenates `../include/**/*.tex` into `preamble.sty` at vault root
-- `watch-preamble.ps1` — `FileSystemWatcher` that auto-rebuilds on `.tex` change
+- `build-preamble.ps1` / `build-preamble.sh` — concatenates `../include/**/*.tex` into `preamble.sty` at vault root
+- `watch-preamble.ps1` / `watch-preamble.sh` — file watcher that auto-rebuilds on `.tex` change
+
+Use the `.ps1` pair on Windows (PowerShell `FileSystemWatcher`) and the `.sh`
+pair on Linux/macOS (`inotifywait`). Both write the same `preamble.sty`.
 
 ---
 
@@ -20,8 +23,16 @@ git submodule add https://github.com/gunheeShin/tex_symbols.git tex
 
 ### 2. Initial build
 
+**Windows (PowerShell)**:
+
 ```powershell
 pwsh -ExecutionPolicy Bypass -File tex/obsidian/build-preamble.ps1
+```
+
+**Linux / macOS (bash)**:
+
+```bash
+bash tex/obsidian/build-preamble.sh
 ```
 
 → Generates `preamble.sty` at vault root.
@@ -47,16 +58,42 @@ pwsh -ExecutionPolicy Bypass -File tex/obsidian/build-preamble.ps1
 
 설정창 닫으면 즉시 적용됨 (앱 재시작 불필요).
 
-### 5. Terminal alias (PowerShell `$PROFILE`에 추가)
+### 5. Auto-rebuild watcher
+
+저장할 때마다 `preamble.sty`를 자동 재생성한다. 한 번 띄워두면 매크로
+편집 후 Obsidian으로 돌아가면 즉시 반영된다.
+
+**Windows (PowerShell `$PROFILE`에 추가)**:
 
 ```powershell
 # tex_symbols watcher
 function watch-tex {
-    powershell -ExecutionPolicy Bypass -File "C:\Users\gunma\ObsidianVault\tex\obsidian\watch-preamble.ps1"
+    pwsh -ExecutionPolicy Bypass -File "C:\path\to\vault\tex\obsidian\watch-preamble.ps1"
 }
 ```
 
-`C:\path\to\vault`를 실제 vault 경로로 변경. 이후 새 터미널에서 `watch-tex` 실행하면 워처가 백그라운드로 돌면서 자동 빌드.
+`C:\path\to\vault`를 실제 vault 경로로 변경. 새 터미널에서 `watch-tex` 실행.
+
+**Linux / macOS (bash)**:
+
+먼저 `inotify-tools` 설치 (한 번만):
+
+```bash
+sudo apt install inotify-tools          # Debian/Ubuntu
+# brew install fswatch                  # macOS는 fswatch 권장 (스크립트 수정 필요)
+```
+
+실행:
+
+```bash
+bash tex/obsidian/watch-preamble.sh
+```
+
+`~/.bashrc` 또는 `~/.zshrc`에 alias 추가 가능:
+
+```bash
+alias watch-tex='bash ~/Documents/Obsidian\ Vault/tex/obsidian/watch-preamble.sh'
+```
 
 ---
 
@@ -66,10 +103,10 @@ function watch-tex {
 Edit tex/include/*.tex
         |
         v
-watch-preamble.ps1  (FileSystemWatcher on include/**/*.tex)
-        |  detects change
+watch-preamble.{ps1|sh}   (FileSystemWatcher / inotifywait on include/**/*.tex)
+        |  detects change (debounced 500ms)
         v
-build-preamble.ps1
+build-preamble.{ps1|sh}
         |  parses main.tex for \input order
         |  concatenates include/**/*.tex in order
         |  writes UTF-8 (no BOM)
