@@ -12,14 +12,26 @@
 
         \newcommand\dRadarPtInRadarFrame{{}^{\dRadarFrame} \dRadarPt}
         \newcommand\dRadarPtInLidarFrame{{}^{\dLidarFrame} \dRadarPt} 
-        \newcommand\dRadarPtNomInLidarFrame{{}^{\dLidarFrame} \dPtNom_{\dRadarFrame}} 
+        \newcommand\dRadarPtInCameraFrame{{}^{\dCameraFrame} \dRadarPt}
 
         \newcommand\dIthPt{\dPt_{i}}
         \newcommand\dJthPt{\dPt_{j}}
         \newcommand\dKthPt{\dPt_{k}}
 
-        \newcommand\dJthPtInJthLidarFrame{{}^{\dJthLidarFrame} \dPt_{j}}
-        \newcommand\dJthPtInKthIMUFrame{{}^{\dKthIMUFrame} \dPt_{j}}
+        \newcommand\dJthRadarPt{\dPt_{\dRadarFrame_j}}
+        \newcommand\dLthRadarPt{\dPt_{\dRadarFrame_l}}
+
+        \newcommand\dKthLidarPt{\dPt_{\dLidarFrame_k}}
+        \newcommand\dLthLidarPt{\dPt_{\dLidarFrame_l}}
+
+        \newcommand\dJthPtInJthLidarFrame{{}^{\dJthLidarFrame} \dJthPt}
+        \newcommand\dJthPtInKthIMUFrame{{}^{\dKthIMUFrame} \dJthPt}
+
+        \newcommand\dJthRadarPtInCameraFrame{{}^{\dCameraFrame} \dJthRadarPt}
+        \newcommand\dLthRadarPtInCameraFrame{{}^{\dCameraFrame} \dLthRadarPt}
+
+        \newcommand\dKthLidarPtInCameraFrame{{}^{\dCameraFrame} \dKthLidarPt}
+        \newcommand\dLthLidarPtInCameraFrame{{}^{\dCameraFrame} \dLthLidarPt}
 
         % Homogeneous
             \newcommand\dPtHomo{\dPt^{\mathrm{h}}}
@@ -39,6 +51,21 @@
 
     % Nominal
         \newcommand\dPtNom{\hat{\dPt}}
+
+        \newcommand\dJthRadarPtNom{\dPtNom_{\dRadarFrame_j}}
+        \newcommand\dLthRadarPtNom{\dPtNom_{\dRadarFrame_l}}
+
+        \newcommand\dKthLidarPtNom{\dPtNom_{\dLidarFrame_k}}
+        \newcommand\dLthLidarPtNom{\dPtNom_{\dLidarFrame_l}}
+
+
+        \newcommand\dRadarPtNomInLidarFrame{{}^{\dLidarFrame} \dPtNom_{\dRadarFrame}}
+
+        \newcommand\dJthRadarPtNomInCameraFrame{{}^{\dCameraFrame} \dJthRadarPtNom}
+        \newcommand\dLthRadarPtNomInCameraFrame{{}^{\dCameraFrame} \dLthRadarPtNom}
+
+        \newcommand\dKthLidarPtNomInCameraFrame{{}^{\dCameraFrame} \dKthLidarPtNom}
+        \newcommand\dLthLidarPtNomInCameraFrame{{}^{\dCameraFrame} \dLthLidarPtNom}
 
         \newcommand\dJthPtNomInKthIMUFrame{{}^{\dKthIMUFrame} \dPtNom_{j}}
         % Homogeneous
